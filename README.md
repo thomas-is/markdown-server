@@ -1,6 +1,6 @@
 # markdown server
 
-## TL;DR
+## TL;DR
 
 1. start the server with `run-local.sh`
 2. run `genstyles-local.sh` while the server is running (do it once)
