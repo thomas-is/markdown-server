@@ -1,0 +1,5 @@
+__pycache__
+venv
+src/html/css/pygments
+src/html/css/github
+src/md
