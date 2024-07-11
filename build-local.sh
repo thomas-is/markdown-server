@@ -6,10 +6,13 @@ mkdir -p $base/venv
 mkdir -p $base/src
 touch $base/src/requirements.txt
 
-echo "🐳 docker run"
+echo "🐳 docker build"
+docker build -t markdown $base
+
+echo "🔧 genstyles"
 docker run --rm -it \
   --name mardown-server \
+  --user python \
   -v $base/src:/src \
-  -p 8080:8080 \
   -w /src \
-  markdown
+  markdown /usr/local/bin/genstyles.sh
