@@ -13,7 +13,6 @@ echo "🐳 docker run"
 docker run --rm -it \
   --name mardown-server \
   -v $base/src:/src \
-  -v $base/venv:/venv \
   -p 8080:8080 \
   -w /src \
   markdown
