@@ -6,6 +6,37 @@ from markdown.extensions.toc import TocExtension
 
 app = Flask(__name__)
 
+@app.route('/', methods=['GET'])
+def index() :
+    md_dir = "/src/md"
+    md_files = []
+    entries = os.listdir(md_dir)
+    for entry in entries:
+        if not os.path.isfile(f"{md_dir}/{entry}"):
+            continue
+        md_files.append(entry)
+    html_nav = "<nav>\n"
+    for file in sorted(md_files):
+        file = os.path.splitext(file)[0]
+        html_nav += f"<a href=\"/markdown/{file}\">{file}</a>\n"
+    html_nav += "</nav>"
+
+    name = "index"
+    html = f"""
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{name}</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <main>{html_nav}</main>
+</body>
+</html>
+"""
+    return html
+
 @app.route('/markdown/<name>', methods=['GET'])
 def markdown_view(name):
 
