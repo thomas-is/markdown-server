@@ -16,10 +16,17 @@ print("It works!")
 
 ## LaTeX
 
-```math
-\begin{align}
-  V_{sphere} = \frac{4}{3}\pi r^3 \label{eq:test1}
-\end{align}
+The following code in your mardown
+
+```latex
+$$
+V_{sphere} = \frac{4}{3}\pi r^3 \label{eq:test1}
+$$
 ```
-<https://pypi.org/project/markdown-katex/>
-<https://github.com/mitya57/python-markdown-math>
+
+will render as:
+
+$$
+V_{sphere} = \frac{4}{3}\pi r^3 \label{eq:test1}
+$$
+
