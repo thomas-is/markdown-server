@@ -1,4 +1,5 @@
 body{
+  width: 95vw;
   max-width: 800px;
   margin: 16px auto;
 }
@@ -8,7 +9,13 @@ main {
   border-radius: 16px;
   box-shadow: 0px 0px 6px #999;
 }
-
+nav {
+  display: flex;
+  flex-flow: column;
+}
+nav > a {
+  flex: 1 1;
+}
 div.codehilite > pre {
     color: white;
     background-color: black;
