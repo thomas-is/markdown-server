@@ -9,7 +9,7 @@ touch $base/src/requirements.txt
 echo "🐳 docker build"
 docker build -t markdown $base
 
-echo "🔧 genstyles"
+echo "🐳 generating css locally"
 docker run --rm -it \
   --name mardown-server \
   --user python \
