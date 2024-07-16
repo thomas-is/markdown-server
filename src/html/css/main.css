@@ -1,9 +1,10 @@
-body{
-  width: 95vw;
-  max-width: 800px;
-  margin: 16px auto;
+* {
+  box-sizing: border-box;
 }
 main {
+  width: 720px;
+  max-width: 90%;
+  margin: 16px auto !important;;
   padding: 24px;
   border: 1px solid #999;
   border-radius: 16px;
@@ -11,12 +12,22 @@ main {
 }
 nav {
   display: flex;
-  flex-flow: column;
+  flex-flow: row;
+  flex-wrap:  wrap;
 }
 nav > a {
-  flex: 1 1;
+  display: block;
+  flex: 1 1 200px;
+  margin: 4px;
+  font-size: 18px;
+  border: 1px solid black;
+  border-radius: 16px;
+  padding: 4px;
+  text-align: center;
 }
 div.codehilite > pre {
     color: white;
     background-color: black;
 }
+
+
