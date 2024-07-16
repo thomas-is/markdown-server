@@ -2,6 +2,13 @@
 
 [TOC]
 
+## Automatic table of contents
+
+Insert a line with
+```
+[TOC]
+```
+
 ## Code snippets
 
 ```bash
@@ -16,17 +23,11 @@ print("It works!")
 
 ## LaTeX
 
-The following code in your mardown
+To insert formulas such as
 
+$$ V_{sphere} = \frac{4}{3}\pi r^3 \label{eq:test1} $$
+
+use `$$` and LaTeX code
 ```latex
-$$
-V_{sphere} = \frac{4}{3}\pi r^3 \label{eq:test1}
-$$
+$$ V_{sphere} = \frac{4}{3}\pi r^3 \label{eq:test1} $$
 ```
-
-will render as:
-
-$$
-V_{sphere} = \frac{4}{3}\pi r^3 \label{eq:test1}
-$$
-
